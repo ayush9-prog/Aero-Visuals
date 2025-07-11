@@ -1,0 +1,25 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+nav > div > a {
+    text-decoration: none;
+    color: black;
+}
+
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
+    padding: 3%;
+}
+
+.navbuttons {
+    display: flex;
+    gap: 2vw;
+    font-size: 3vw;
+}
