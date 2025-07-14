@@ -13,6 +13,7 @@ nav>div>a {
 
 .logo img {
     width: 50px;
+
     position: relative;
     left: 35px;
 }
@@ -20,9 +21,7 @@ nav>div>a {
 .navbar {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     background-color: rgb(19, 19, 19);
-    margin: auto;
     padding: 10px;
     height: 65px;
     gap: 60px;
@@ -32,21 +31,36 @@ nav>div>a {
 }
 
 .navbuttons {
-    margin: auto;
-    border: none;
-    outline: none;
-    background: none;
+    gap: 15px;
+    position: absolute;
+    left: 50%;
+     transform: translateX(-50%);
     display: flex;
-    gap: 25px;
+    align-items: center;
+    justify-content: center;
     font-family: "Michroma", sans-serif;
     font-size: 17px;
 }
 
+
+
 .navbuttons a {
-    border: none;
-    outline: none;
+    padding: 2px;
     background: none;
     color: #f0f0f0;
-    position: relative;
-    right: 25px;
+}
+
+.contact {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: right;
+    font-family: "Michroma", sans-serif;
+    right: 35px;
+    top: 27px;
+    font-weight: bolder;
+    background: linear-gradient(135deg, #50d909, #c5ecb2);
+    padding: 4px;
+    border-radius: 10px;
+    color: #131313;
 }
