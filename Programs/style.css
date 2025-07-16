@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=TikTok+Sans:opsz,wght@12..36,300..900&display=swap');
 * {
     padding: 0;
     margin: 0;
@@ -13,9 +13,9 @@ nav>div>a {
 
 .logo img {
     width: 50px;
-
     position: relative;
     left: 35px;
+    top: 3px;
 }
 
 .navbar {
@@ -34,7 +34,7 @@ nav>div>a {
     gap: 15px;
     position: absolute;
     left: 50%;
-     transform: translateX(-50%);
+    transform: translateX(-50%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -55,12 +55,30 @@ nav>div>a {
     position: absolute;
     align-items: center;
     justify-content: right;
-    font-family: "Michroma", sans-serif;
+    font-family: "TikTok Sans", sans-serif;
     right: 35px;
-    top: 27px;
-    font-weight: bolder;
-    background: linear-gradient(135deg, #50d909, #22f6a1);
-    padding: 4px;
-    border-radius: 10px;
+    top: 26px;
+    font-weight: bold;
+    font-size: 20px;
+    background: #50d909;
+    border-radius: 6px;
     color: #131313;
+    border: #50d909 solid 5px;
+}
+
+.navbuttons a:hover {
+    color: #50d909;
+    transition: color 0.2s ease-in-out;
+}
+
+
+
+.contact:hover {
+    transition: 0.2s ease-in-out;
+    outline: 2px solid #199a08;
+    outline-offset: 3px;
+}
+
+.contact:active {
+    transform: scale(0.98);
 }
