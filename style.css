@@ -76,6 +76,4 @@ nav>div>a {
     outline-offset: 3px;
 }
 
-.contact:active {
-    transform: scale(0.98);
-}
+
