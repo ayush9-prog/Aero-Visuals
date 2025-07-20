@@ -8,6 +8,10 @@
   background-color: rgb(9, 9, 9);
 }
 
+nav {
+    background-color: red;
+}
+
 /* Full Nav Bar Box */
 .nav-items {
   /* Each will act as span */
@@ -17,18 +21,22 @@
   /* align items in x-axis */
   justify-content: center;
   /* Adding space by padding */
-  padding: 3vw 12vw;
+  padding: 20px 12px;
+  /* Height of nav bar */
+  height: 80px;
+  /* Background color */
 }
 
 /* logo */
-.items>.a0>a {
-  display: flex;
-  align-items: center;
+.logo>a {
   font-family: "Bitcount Grid Single", system-ui;
   /* Remove any text dec. due to link tag */
   text-decoration: none;
   color: #50d909;
   font-weight: 500;
+  font-size: 30px;
+  padding-right: 20px;
+   line-height: 1;/* ✅ Ensure no extra vertical space */
 }
 
 
@@ -52,4 +60,5 @@
   /* Will remove default link line color & list style */
   text-decoration: none;
   list-style: none;
+   line-height: 1;/* ✅ Fix vertical spacing */
 }
