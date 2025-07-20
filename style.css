@@ -1,121 +1,55 @@
 @import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=TikTok+Sans:opsz,wght@12..36,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Single:wght@100..900&display=swap');
 
 * {
-    padding: 0;
-    margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  background-color: rgb(9, 9, 9);
 }
 
-nav>div>a {
-    text-decoration: none;
-    color: black;
+/* Full Nav Bar Box */
+.nav-items {
+  /* Each will act as span */
+  display: flex;
+  /* align items in y-axis */
+  align-items: center;
+  /* align items in x-axis */
+  justify-content: center;
+  /* Adding space by padding */
+  padding: 3vw 12vw;
 }
 
-.logo img {
-    width: 50px;
-    position: relative;
-    left: 35px;
-    top: 3px;
-}
-
-.navbar {
-    display: flex;
-    align-items: center;
-    background-color: rgb(19, 19, 19);
-    padding: 10px;
-    height: 65px;
-    gap: 60px;
-    border-bottom: 5px solid #50d909;
-    border-bottom-left-radius: 50px;
-    border-bottom-right-radius: 50px;
-}
-
-.navbuttons {
-    gap: 15px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: "Michroma", sans-serif;
-    font-size: 17px;
-}
-
-
-
-.navbuttons a {
-    padding: 2px;
-    background: none;
-    color: #f0f0f0;
-}
-
-.contact {
-    display: flex;
-    position: absolute;
-    align-items: center;
-    justify-content: right;
-    right: 35px;
-    top: 20px;
-    background: #50d909;
-    border-radius: 12px;
-    color: #131313;
-    border: #50d909 solid 5px;
-}
-
-.navbuttons a:hover {
-    color: #50d909;
-    transition: color 0.2s ease-in-out;
-}
-
-
-
-.contact:hover {
-    transition: 0.2s ease-in-out;
-    outline: 2px solid #199a08;
-    outline-offset: 3px;
-}
-
-/* Side Bar for menu */
-
-#menu-btn {
-  display: none; /* hide by default */
-  position: fixed;
-  top: 15px;
-  left: 15px;
-  padding: 10px 15px;
-  font-size: 18px;
-  background: #333;
-  color: white;
-  border: none;
-  z-index: 1000;
-}
-
-.sidebar {
-  position: fixed;
-  top: 0;
-  left: -250px;
-  width: 250px;
-  height: 100%;
-  background: #222;
-  color: white;
-  padding-top: 60px;
-  transition: left 0.3s ease;
-  display: none; /* hide by default */
-}
-
-.sidebar a {
-  display: block;
-  padding: 15px;
-  color: white;
+/* logo */
+.items>.a0>a {
+  display: flex;
+  align-items: center;
+  font-family: "Bitcount Grid Single", system-ui;
+  /* Remove any text dec. due to link tag */
   text-decoration: none;
+  color: #50d909;
+  font-weight: 500;
 }
 
-.sidebar a:hover {
-  background: #444;
+
+/* Changes in nav items box */
+.items {
+  /* Each will act as span */
+  display: flex;
+  /* 1 em - 1 of the current font size gap btw words */
+  gap: 20px;
+  /* Size */
+  font-size: 15px;
 }
 
-.sidebar.active {
-  left: 0;
+/* Changes in nav items>indivdual>link>font box */
+.items a {
+  /* Font & color*/
+  font-family: "Michroma", sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  color: rgb(246, 246, 246);
+  /* Will remove default link line color & list style */
+  text-decoration: none;
+  list-style: none;
 }
-
