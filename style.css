@@ -76,4 +76,46 @@ nav>div>a {
     outline-offset: 3px;
 }
 
+/* Side Bar for menu */
+
+#menu-btn {
+  display: none; /* hide by default */
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  padding: 10px 15px;
+  font-size: 18px;
+  background: #333;
+  color: white;
+  border: none;
+  z-index: 1000;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background: #222;
+  color: white;
+  padding-top: 60px;
+  transition: left 0.3s ease;
+  display: none; /* hide by default */
+}
+
+.sidebar a {
+  display: block;
+  padding: 15px;
+  color: white;
+  text-decoration: none;
+}
+
+.sidebar a:hover {
+  background: #444;
+}
+
+.sidebar.active {
+  left: 0;
+}
 
