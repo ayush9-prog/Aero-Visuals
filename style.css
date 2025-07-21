@@ -2,6 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
 /* Bitcount Font */
 @import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Single:wght@100..900&display=swap');
+/* Seoge UI */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 
 /* All */
 * {
@@ -95,3 +98,46 @@ body {
   color: var(--text-color-hover);
   transition: 100ms ease-in-out;
 }
+
+/* Hero Section */
+.hero {
+  font-family: "Roboto", sans-serif;
+  font-weight: 1000;
+  font-size: 77px;
+  display: flex;
+  justify-content: center;
+  /* horizontal */
+  align-items: center;
+  /* full viewport height */
+  text-align: center;
+  line-height: 80px;
+  position: relative;
+  top: 70px;
+}
+
+/* Links */
+.links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  position: relative;
+  top: 100px;
+  font-family: "Roboto", sans-serif;
+  font-size: 30px;
+  gap: 20px;
+  font-weight: 800;
+}
+
+/* Links boxes */
+.links a {
+  background-color: var(--background-color-contact);
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 3px;
+  padding-top: 3px;
+  border-radius: 10px;
+}
+
+
+
