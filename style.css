@@ -1,64 +1,97 @@
+/* Michroma Font */
 @import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
+/* Bitcount Font */
 @import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Single:wght@100..900&display=swap');
 
+/* All */
 * {
-  box-sizing: border-box;
-  padding: 0;
+  color: inherit;
+  text-decoration: none;
   margin: 0;
-  background-color: rgb(9, 9, 9);
+  padding: 0;
+  box-sizing: border-box;
 }
 
-nav {
-    background-color: red;
+/* Variables */
+:root {
+  /* Nav Bar */
+  --text-color: rgb(247, 247, 247);
+  --text-color-hover: #62d926;
+  --text-color-aero: #50d909;
+  --text-color-contact: #101010;
+  --background-color: rgb(225, 225, 225);
+  --background-color-contact: #50d909;
+  --background-color-contact-hover: #48b811;
+  --background-color-navbar-box: rgb(16, 16, 16);
 }
 
-/* Full Nav Bar Box */
-.nav-items {
-  /* Each will act as span */
-  display: flex;
-  /* align items in y-axis */
-  align-items: center;
-  /* align items in x-axis */
-  justify-content: center;
-  /* Adding space by padding */
-  padding: 20px 12px;
-  /* Height of nav bar */
-  height: 80px;
-  /* Background color */
+/* Smooth Scroll while tapping on link */
+html {
+  scroll-behavior: smooth;
 }
 
-/* logo */
-.logo>a {
-  font-family: "Bitcount Grid Single", system-ui;
-  /* Remove any text dec. due to link tag */
-  text-decoration: none;
-  color: #50d909;
-  font-weight: 500;
-  font-size: 30px;
-  padding-right: 20px;
-   line-height: 1;/* ✅ Ensure no extra vertical space */
-}
-
-
-/* Changes in nav items box */
-.items {
-  /* Each will act as span */
-  display: flex;
-  /* 1 em - 1 of the current font size gap btw words */
-  gap: 20px;
-  /* Size */
-  font-size: 15px;
-}
-
-/* Changes in nav items>indivdual>link>font box */
-.items a {
-  /* Font & color*/
-  font-family: "Michroma", sans-serif;
+/* Body */
+body {
+  font-family: "Michroma", system-ui;
   font-weight: bold;
-  font-style: normal;
-  color: rgb(246, 246, 246);
-  /* Will remove default link line color & list style */
-  text-decoration: none;
+  background-color: var(--background-color);
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 610px;
+  margin: 30px auto 0 auto;
+  height: 60px;
+  background-color: var(--background-color-navbar-box);
+  border-radius: 14px;
+}
+
+/* Options box all - navbar  */
+.items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  font-size: 25px;
+}
+
+/* aero-logo */
+.a1 {
+  width: 45px;
+  position: relative;
+  top: 2px;
+}
+
+/* Contact */
+.a5 {
+  color: var(--text-color-contact);
+  background-color: var(--background-color-contact);
+  padding: 2px 5px;
+  border-radius: 6px;
+}
+
+/* Contact hover */
+.a5:hover {
+  background-color: var(--background-color-contact-hover);
+  transition: 100ms ease-in-out;
+}
+
+/* Options box individual[list] - navbar  */
+.items>li {
   list-style: none;
-   line-height: 1;/* ✅ Fix vertical spacing */
+}
+
+
+/* Options's Font - nav-bar*/
+.items>li {
+  color: var(--text-color);
+}
+
+/* Hover effect on nav-bar */
+.items>li:hover {
+  color: var(--text-color-hover);
+  transition: 100ms ease-in-out;
 }
