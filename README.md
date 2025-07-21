@@ -1,4 +1,4 @@
-# Portfolio Website for Creative Agency - aero.ai
+# Portfolio Website for Creative Agency - Aero Visuals
 
 A portfolio website built to showcase the innovation, storytelling, and design brilliance of our creative agency. Designed with a clean, modern aesthetic and smooth interactive elements, the site highlights our core services in branding, UI/UX design, motion graphics, and video editing.
 
