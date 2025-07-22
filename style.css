@@ -16,12 +16,13 @@
 :root {
   --text-color: rgb(247, 247, 247);
   --text-color-hover: #62d926;
-  --text-color-aero: #50d909;
+  --text-color-active: #53b621;
+  --text-color-aero: #4acc09;
   --text-color-contact: #101010;
-
-  --background-color: rgba(45, 246, 112, 0);
+  --background-color-section: rgb(251, 251, 251);
   --background-color-contact: #50d909;
-  --background-color-contact-hover: #48b811;
+  --background-color-contact-hover: #52c319;
+  --background-color-contact-active: #3c990d;
   --background-color-navbar-box: rgb(16, 16, 16);
   --background-shadow-navbar-box: rgba(16, 16, 16, 0.3);
 }
@@ -67,11 +68,16 @@ body {
   color: var(--text-color);
 }
 
-.items>li:hover {
+/* Nav bar hover */
+nav li:hover  {
   color: var(--text-color-hover);
   transition: color 100ms ease-in-out;
 }
 
+nav li:active  {
+  color: var(--text-color-active);
+  transition: color 100ms ease-in-out;
+}
 /* Logo */
 .a1 {
   width: 45px;
@@ -81,19 +87,37 @@ body {
 
 /* Contact Button */
 .a5 {
+  display: inline-block;
   color: var(--text-color-contact);
   background-color: var(--background-color-contact);
   padding: 2px 5px;
   border-radius: 6px;
+  transition: background-color 100ms ease-in-out, transform 100ms ease-in-out;
 }
 
-.a5:hover {
+/* Contact button hover */
+.a5:hover  {
   background-color: var(--background-color-contact-hover);
-  transition: background-color 100ms ease-in-out;
 }
+
+/* Contact button active */
+.a5:active  {
+  background-color: var(--background-color-contact-active);
+}
+
+
+
+/* All sections */
+section{
+  min-height: 100dvh;
+  background-color: var(--background-color-section);
+  border: 3px solid black;
+}
+
 
 /* Hero Section */
 .hero {
+  min-height: 100dvh;
   font-family: "Roboto", sans-serif;
   font-weight: 1000;
   font-size: clamp(26px, 6vw, 90px);
@@ -102,11 +126,9 @@ body {
   align-items: center;
   text-align: center;
   line-height: 1;
-  height: 100vh;
   padding: 0 1em;
   flex-direction: column;
   position: relative;
-  bottom: 0.2em;
 }
 
 /* Links Section */
@@ -124,31 +146,30 @@ body {
 
 .links a {
   background-color: var(--background-color-contact);
-  padding: 3px 10px;
+  padding: 3px 13px;
   border-radius: 10px;
-  transition: all 150ms ease-in-out;
+  position: relative;
 }
 
 /* About Section */
-.about {
-  position: relative;
-  top: 15em;
-  padding: 15em;
-  right: 10em;
-}
 
-.about h1 {
+.about h2 {
   font-family: "TikTok Sans", sans-serif;
   font-size: 3.5em;
+  position: relative;
+  top: 2em;
+  padding-left: 1em;
+
 }
 
 .about p {
   font-family: "TikTok Sans", sans-serif;
   font-weight: 500;
   font-size: 2em;
-  width: 80%;
+  width: 50%;
   position: relative;
-  top: 0.5em;
+  top: 4em;
+  padding-left: 1.8em;
 }
 
 /* Responsive */
