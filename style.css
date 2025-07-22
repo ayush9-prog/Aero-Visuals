@@ -1,14 +1,10 @@
-/* Michroma Font */
+/* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
-/* Bitcount Font */
 @import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Single:wght@100..900&display=swap');
-/* Seoge UI */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-/* Tiktok sans */
 @import url('https://fonts.googleapis.com/css2?family=TikTok+Sans:opsz,wght@12..36,300..900&display=swap');
 
-
-/* All */
+/* Base Reset */
 * {
   color: inherit;
   text-decoration: none;
@@ -17,26 +13,24 @@
   box-sizing: border-box;
 }
 
-/* Variables */
 :root {
-  /* Nav Bar */
   --text-color: rgb(247, 247, 247);
   --text-color-hover: #62d926;
   --text-color-aero: #50d909;
   --text-color-contact: #101010;
+
   --background-color: rgba(45, 246, 112, 0);
   --background-color-contact: #50d909;
   --background-color-contact-hover: #48b811;
   --background-color-navbar-box: rgb(16, 16, 16);
-  --background-shadow-navbar-box: rgb(16, 16, 16, .3);
+  --background-shadow-navbar-box: rgba(16, 16, 16, 0.3);
 }
 
-/* Smooth Scroll while tapping on link */
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 80px;
 }
 
-/* Body */
 body {
   font-family: "Michroma", system-ui;
   font-weight: bold;
@@ -48,7 +42,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 730px;
+  width: 630px;
   height: 60px;
   background-color: var(--background-color-navbar-box);
   border-radius: 14px;
@@ -57,27 +51,36 @@ body {
   left: 50%;
   transform: translateX(-50%);
   z-index: 1000;
-  margin: 0;
   box-shadow: 0 4px 20px var(--background-shadow-navbar-box);
 }
 
-/* Options box all - navbar  */
+/* Navbar Items */
 .items {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 20px;
-  font-size: 25px;
+  font-size: 20px;
+  list-style: none;
 }
 
-/* aero-logo */
+.items > li {
+  color: var(--text-color);
+}
+
+.items > li:hover {
+  color: var(--text-color-hover);
+  transition: color 100ms ease-in-out;
+}
+
+/* Logo */
 .a1 {
   width: 45px;
   position: relative;
   top: 2px;
 }
 
-/* Contact */
+/* Contact Button */
 .a5 {
   color: var(--text-color-contact);
   background-color: var(--background-color-contact);
@@ -85,70 +88,49 @@ body {
   border-radius: 6px;
 }
 
-/* Contact hover */
 .a5:hover {
   background-color: var(--background-color-contact-hover);
-  transition: 100ms ease-in-out;
-}
-
-/* Options box individual[list] - navbar  */
-.items>li {
-  list-style: none;
-}
-
-
-/* Options's Font - nav-bar*/
-.items>li {
-  color: var(--text-color);
-}
-
-/* Hover effect on nav-bar */
-.items>li:hover {
-  color: var(--text-color-hover);
-  transition: 100ms ease-in-out;
+  transition: background-color 100ms ease-in-out;
 }
 
 /* Hero Section */
 .hero {
   font-family: "Roboto", sans-serif;
   font-weight: 1000;
-  font-size: 77px;
+  font-size: clamp(26px, 6vw, 90px);
   display: flex;
   justify-content: center;
-  /* horizontal */
   align-items: center;
-  /* full viewport height */
   text-align: center;
-  line-height: 80px;
+  line-height: 1;
+  height: 100vh;
+  padding: 0 1em;
+  flex-direction: column;
   position: relative;
-  top: 2.2em;
+  bottom: 0.2em;
 }
 
-/* Links */
+/* Links Section */
 .links {
   display: flex;
   justify-content: center;
   align-items: center;
-  align-content: center;
   position: relative;
-  top: 6.5em;
+  bottom: 3.5em;
   font-family: "Roboto", sans-serif;
-  font-size: 30px;
+  font-size: 40px;
   gap: 20px;
   font-weight: 800;
 }
 
-/* Links boxes */
 .links a {
   background-color: var(--background-color-contact);
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-bottom: 3px;
-  padding-top: 3px;
+  padding: 3px 10px;
   border-radius: 10px;
+  transition: all 150ms ease-in-out;
 }
 
-/* about */
+/* About Section */
 .about {
   position: relative;
   top: 15em;
@@ -156,18 +138,86 @@ body {
   right: 10em;
 }
 
-/* About me text */
 .about h1 {
-   font-family: "TikTok Sans", sans-serif;
-   font-size: 3.5em;
+  font-family: "TikTok Sans", sans-serif;
+  font-size: 3.5em;
 }
 
-/* About me para text */
 .about p {
   font-family: "TikTok Sans", sans-serif;
   font-weight: 500;
   font-size: 2em;
-  position: relative;
   width: 80%;
+  position: relative;
   top: 0.5em;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    width: 100%;
+    height: 5em;
+    flex-direction: column;
+    top: auto;
+    gap: 10px;
+    border-radius: 0;
+  }
+
+  .items {
+    gap: 10px;
+    font-size: 20px;
+  }
+
+  .items li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .a1 {
+    width: 35px;
+  }
+
+  .hero {
+    font-size: clamp(24px, 8vw, 60px);
+    line-height: 1.2;
+    padding: 0 20px;
+    top: 3.5em;
+    text-align: center;
+  }
+
+  .links {
+    flex-direction: column;
+    font-size: 22px;
+    top: 7.5em;
+    gap: 15px;
+  }
+
+  .links a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 12px;
+    font-size: 18px;
+  }
+
+  .link-pics {
+    width: 26px !important;
+  }
+
+  .about {
+    padding: 4em 2em;
+    right: 0;
+    top: 10em;
+  }
+
+  .about h1 {
+    font-size: clamp(24px, 4vw, 56px);
+    text-align: center;
+  }
+
+  .about p {
+    font-size: clamp(16px, 2.5vw, 32px);
+    width: 100%;
+    text-align: center;
+  }
 }
