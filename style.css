@@ -28,7 +28,6 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 80px;
 }
 
 body {
@@ -64,11 +63,11 @@ body {
   list-style: none;
 }
 
-.items > li {
+.items>li {
   color: var(--text-color);
 }
 
-.items > li:hover {
+.items>li:hover {
   color: var(--text-color-hover);
   transition: color 100ms ease-in-out;
 }
@@ -156,52 +155,93 @@ body {
 @media (max-width: 768px) {
   .navbar {
     width: 100%;
-    height: 5em;
-    flex-direction: column;
+    height: 4em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     top: auto;
-    gap: 10px;
-    border-radius: 0;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    padding: 0 1.2em;
+    /* Add spacing on left and right */
   }
 
   .items {
-    gap: 10px;
-    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 15px;
   }
 
   .items li {
-    width: 100%;
     text-align: center;
+    flex: 1;
+
   }
 
-  .a1 {
-    width: 35px;
+  .items img {
+    width: 3em;
+  }
+
+  /* Only allow logo and contact to size naturally */
+  .items li:first-child,
+  .items li:last-child {
+    flex: none;
+    width: auto;
+  }
+
+  /* Hide intermediate nav items */
+  .items li:nth-child(2),
+  .items li:nth-child(3),
+  .items li:nth-child(4),
+  .items li:nth-child(5) {
+    display: none;
+  }
+
+  /* Optional: control logo image */
+  .a1 img {
+    height: 2em;
+  }
+
+  /* Optional: style for contact link */
+  .a5 {
+    padding: 0.4em 1em;
   }
 
   .hero {
-    font-size: clamp(24px, 8vw, 60px);
+    font-size: clamp(10px, 90vw, 40px);
     line-height: 1.2;
     padding: 0 20px;
-    top: 3.5em;
     text-align: center;
+    bottom: 1em;
   }
 
   .links {
     flex-direction: column;
     font-size: 22px;
-    top: 7.5em;
+    bottom: 9.5em;
     gap: 15px;
   }
+
 
   .links a {
     display: flex;
     align-items: center;
-    gap: 8px;
-    padding: 6px 12px;
+    justify-content: center;
+    gap: 10px;
     font-size: 18px;
+    padding: 10px 20px;
+    width: 200px;
+    height: 50px;
   }
 
-  .link-pics {
-    width: 26px !important;
+ .links img {
+    position: relative;
+    width: 30px !important;
+    top: 9px;
   }
 
   .about {
