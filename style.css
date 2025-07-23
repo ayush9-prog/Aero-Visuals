@@ -47,7 +47,7 @@ body {
   background-color: var(--background-color-navbar-box);
   border-radius: 14px;
   position: fixed;
-  top: 1.88em;
+  top: 2em;
   left: 50%;
   transform: translateX(-50%);
   z-index: 1000;
@@ -69,15 +69,16 @@ body {
 }
 
 /* Nav bar hover */
-nav li:hover  {
+nav li:hover {
   color: var(--text-color-hover);
   transition: color 100ms ease-in-out;
 }
 
-nav li:active  {
+nav li:active {
   color: var(--text-color-active);
   transition: color 100ms ease-in-out;
 }
+
 /* Logo */
 .a1 {
   width: 45px;
@@ -96,19 +97,19 @@ nav li:active  {
 }
 
 /* Contact button hover */
-.a5:hover  {
+.a5:hover {
   background-color: var(--background-color-contact-hover);
 }
 
 /* Contact button active */
-.a5:active  {
+.a5:active {
   background-color: var(--background-color-contact-active);
 }
 
 
 
 /* All sections */
-section{
+section {
   min-height: 100dvh;
   background-color: var(--background-color-section);
   border: 3px solid black;
@@ -170,6 +171,72 @@ section{
   position: relative;
   top: 4em;
   padding-left: 1.8em;
+}
+
+/* Skills Section */
+
+
+/* Softwares images */
+
+#skills {
+  display: flex;
+  align-items: center;     /* vertical center */
+  flex-direction: column;  /* keep h2 and images stacked vertically */
+}
+
+.soft img {
+  width: 6em;
+}
+
+.soft {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 8em;
+}
+
+.s4 img {
+  padding-top: 8.7px;
+}
+
+.soft span span {
+  font-family: "TikTok Sans", sans-serif;
+  font-family: 300;
+  font-size: 20px;
+  text-align: center;
+  position: relative;
+  bottom: 2.2em;
+  left: 0.8em;
+  background-color: var(--background-color-contact);
+  /* padding: top right bottom left; */
+  border-radius: 25px;
+}
+
+/* Progress bar */
+
+.aa1 {
+  padding: 4px 20em 5px 1em;
+}
+
+.aa2 {
+  padding: 4px 20em 5px 1em;
+}
+.aa3 {
+  padding: 4px 10em 5px 1em;
+}
+.aa4 {
+  padding: 4px 6em 5px 1em;
+}
+
+.s3 {
+  position: relative;
+  right: 6.2em;
+}
+
+.s4 {
+  position: relative;
+  right: 8.5em;
 }
 
 /* Responsive */
@@ -241,11 +308,15 @@ section{
   }
 
   .links {
-    flex-direction: column;
+    flex-direction: row;
     font-size: 22px;
     bottom: 9.5em;
     gap: 15px;
   }
+
+.links a span {
+  display: none;
+}
 
 
   .links a {
@@ -254,15 +325,13 @@ section{
     justify-content: center;
     gap: 10px;
     font-size: 18px;
-    padding: 10px 20px;
-    width: 200px;
+    padding-bottom: 10px;
     height: 50px;
   }
 
- .links img {
+  .links img {
     position: relative;
     width: 30px !important;
-    top: 9px;
   }
 
   .about {
