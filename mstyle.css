@@ -15,16 +15,27 @@
 
 :root {
   --text-color: rgb(247, 247, 247);
+  --text-color-hero: rgb(247, 247, 247);
   --text-color-hover: #62d926;
   --text-color-active: #53b621;
   --text-color-aero: #4acc09;
   --text-color-contact: #101010;
-  --background-color-section: rgb(251, 251, 251);
+  --background-color-section: rgb(0, 0, 0);
   --background-color-contact: #50d909;
   --background-color-contact-hover: #52c319;
+  /* hamburger */
+  --background-color-contact-hamburger: rgb(21, 21, 21);
+  --background-color-contact-hamburger-outline: rgb(48, 134, 6);
   --background-color-contact-active: #3c990d;
-  --background-color-navbar-box: rgb(16, 16, 16);
-  --background-shadow-navbar-box: rgba(16, 16, 16, 0.3);
+  --background-color-navbar-box: rgb(16, 16, 16, 0.9);
+  --background-color-navbar-box-border: rgb(48, 134, 6);
+  --background-shadow-navbar-box: rgba(16, 16, 16, 0.8);
+}
+
+html,
+body {
+  width: auto !important;
+  overflow-x: hidden !important
 }
 
 html {
@@ -33,7 +44,7 @@ html {
 
 body {
   font-family: "Michroma", system-ui;
-  font-weight: bold;
+  font-weight: bolder;
   background-color: var(--background-color);
 }
 
@@ -42,10 +53,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 630px;
+  width: 600px;
   height: 60px;
   background-color: var(--background-color-navbar-box);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border-radius: 14px;
+  border: 2px solid var(--background-color-navbar-box-border);
   position: fixed;
   top: 2em;
   left: 50%;
@@ -86,6 +100,10 @@ nav li:active {
   top: 2px;
 }
 
+.side {
+  display: none;
+}
+
 /* Contact Button */
 .a5 {
   display: inline-block;
@@ -112,7 +130,11 @@ nav li:active {
 section {
   min-height: 100dvh;
   background-color: var(--background-color-section);
-  border: 3px solid black;
+}
+
+/* Another nav */
+.sidebar {
+  display: none;
 }
 
 
@@ -121,6 +143,7 @@ section {
   min-height: 100dvh;
   font-family: "Roboto", sans-serif;
   font-weight: 1000;
+  color: var(--text-color-hero);
   font-size: clamp(26px, 6vw, 90px);
   display: flex;
   justify-content: center;
@@ -154,19 +177,12 @@ section {
 
 /* About Section */
 
-.about h2 {
-  font-family: "TikTok Sans", sans-serif;
-  font-size: 3.5em;
-  position: relative;
-  top: 2em;
-  padding-left: 1em;
-
-}
 
 .about p {
   font-family: "TikTok Sans", sans-serif;
   font-weight: 500;
   font-size: 2em;
+  color: var(--text-color-hero);
   width: 50%;
   position: relative;
   top: 4em;
@@ -180,8 +196,10 @@ section {
 
 #skills {
   display: flex;
-  align-items: center;     /* vertical center */
-  flex-direction: column;  /* keep h2 and images stacked vertically */
+  align-items: center;
+  /* vertical center */
+  flex-direction: column;
+  /* keep h2 and images stacked vertically */
 }
 
 .soft img {
@@ -222,9 +240,11 @@ section {
 .aa2 {
   padding: 4px 20em 5px 1em;
 }
+
 .aa3 {
   padding: 4px 10em 5px 1em;
 }
+
 .aa4 {
   padding: 4px 6em 5px 1em;
 }
@@ -239,8 +259,15 @@ section {
   right: 8.5em;
 }
 
+
 /* Responsive */
 @media (max-width: 768px) {
+
+  /* Section */
+  section {
+    width: 100vw;
+  }
+
   .navbar {
     width: 100%;
     height: 4em;
@@ -248,12 +275,12 @@ section {
     justify-content: space-between;
     align-items: center;
     top: auto;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     padding: 0 1.2em;
-    /* Add spacing on left and right */
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
   }
 
   .items {
@@ -299,6 +326,39 @@ section {
     padding: 0.4em 1em;
   }
 
+  /* Hambuger menu */
+  .sidebar {
+    list-style: none;
+    display: ;
+    flex-direction: column;
+    height: 100dvh;
+    width: 75vw;
+    position: fixed;
+    /* changed from inherit to fixed */
+    top: 0;
+    /* ensure it starts at the top */
+    right: 0;
+    z-index: 999;
+    background-color: var(--background-color-contact-hamburger);
+    border-radius: 15px 0 0;
+    border-left: 2px solid var(--background-color-contact-hamburger-outline);
+    box-shadow: 0 4px 20px var(--background-shadow-navbar-box);
+  }
+
+  .side {
+    display: block;
+  }
+
+  .sidebar li  {
+    position: relative;;
+    top: 4em;
+    left: 1.4em;
+    padding-bottom: 1em;
+    font-size: 1.8em;
+    color: var(--background-color-contact);
+  }
+
+
   .hero {
     font-size: clamp(10px, 90vw, 40px);
     line-height: 1.2;
@@ -310,13 +370,13 @@ section {
   .links {
     flex-direction: row;
     font-size: 22px;
-    bottom: 9.5em;
+    bottom: 10.5em;
     gap: 15px;
   }
 
-.links a span {
-  display: none;
-}
+  .links a span {
+    display: none;
+  }
 
 
   .links a {
@@ -335,9 +395,9 @@ section {
   }
 
   .about {
-    padding: 4em 2em;
-    right: 0;
-    top: 10em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .about h1 {
